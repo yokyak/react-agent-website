@@ -1,0 +1,35 @@
+<h1 id="reactagent">React Agent</h1>
+<p>React Agent synchronizes client-side and server-side state.  It can be included in any React project without conflict with other state management tools or REST APIs.</p>
+<p>React Agent is easy to learn.</p>
+<p>Here's the basic idea: the client runs 'actions' that are defined on the server-side.</p>
+<pre><code class="javascript language-javascript">run('addUser', { user: 'Billy' })
+</code></pre>
+<p>These actions can be as powerful as you want -- i.e. CRUD operations, API calls, and authentication. Moreover, clients can subscribe to server-side actions so that they  receive live updates.</p>
+<p>React Agent includes offline-support to render optimistic updates and then synchronization on reestablished network connection. It also features time travel debugging.</p>
+<p><em>Why use React Agent?</em></p>
+<p>The popular conceptualization of state management stores state in two places: data on the client-side and data on the server-side.</p>
+<p>To connect these, front-end and back-end developers usually write a lot of code such as HTTP requests, controllers, and routes. It can get complicated.
+<img src="https://github.com/yokyak/react-agent/raw/master/docs/imgs/diagram-before.gif" alt="previous" /></p>
+<p>In contrast, React Agent serves as a communication channel between the client and the server. It abstracts state transfer to make it super easy to interact between the client and server.
+<img src="https://github.com/yokyak/react-agent/raw/master/docs/imgs/diagram-after.gif" alt="now" /></p>
+<h2 id="gettingstarted">Getting Started</h2>
+<p>Install the package:</p>
+<pre><code class="bash language-bash">npm install react-agent --save
+</code></pre>
+<p>See <a href="https://github.com/yokyak/react-agent/tree/master/packages/react-agent">React Agent</a> for information about client-side set-up.</p>
+<p>Install the package:</p>
+<pre><code class="bash language-bash">npm install react-agent-server --save
+</code></pre>
+<p>See <a href="https://github.com/yokyak/react-agent/tree/master/packages/react-agent-server">React Agent Server</a> for information about server-side set-up.</p>
+<h2 id="contributors">Contributors</h2>
+<h3 id="contributing">Contributing</h3>
+<p>Please submit issues/pull requests if you have feedback or message the React Agent team to be added as a contributor: reactagent@gmail.com</p>
+<h3 id="authors">Authors</h3>
+<ul>
+<li><p><strong>Tom Rosenblatt</strong> - <a href="https://github.com/tskittles">https://github.com/tskittles</a></p></li>
+<li><p><strong>Eric Choi</strong> - <a href="https://github.com/eric2turbo">https://github.com/eric2turbo</a></p></li>
+<li><p><strong>Henry Au</strong> - <a href="https://github.com/hhau01">https://github.com/hhau01</a></p></li>
+<li><p><strong>Andrew Harris</strong> - <a href="https://github.com/didrio">https://github.com/didrio</a></p></li>
+</ul>
+<h2 id="license">License</h2>
+<p>This project is licensed under the MIT License - see the <a href="LICENSE.txt">LICENSE.txt</a> file for details</p>
