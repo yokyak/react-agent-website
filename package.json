@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "rm -rf static; mkdir static; node mdToHtml.js; webpack"
+    "start": "npm run build; npm run push",
+    "build": "rm -rf static; mkdir static; node mdToHtml.js; webpack",
+    "push": "git subtree push --prefix static origin gh-pages"
   },
   "author": "Andrew Harris",
   "license": "ISC",

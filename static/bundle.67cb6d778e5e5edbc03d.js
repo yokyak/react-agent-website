@@ -6004,7 +6004,7 @@ var Docs = function (_Component) {
         _react2.default.createElement(
           'span',
           { style: { marginTop: '80px' } },
-          'DOCS'
+          'DOCS!!!!'
         )
       );
     }
