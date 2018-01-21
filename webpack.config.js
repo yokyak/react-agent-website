@@ -18,8 +18,12 @@ module.exports = {
   module: {
     rules: [
       {
-        use: 'image-webpack-loader',
-        test: /\.(jpe?g|png|gif|svg)$/i
+        use: ['file-loader', 'image-webpack-loader'],
+        test: /\.(jpe?g|png|gif)$/i
+      },
+      {
+        use: ['babel-loader', 'react-svg-loader'],
+        test: /\.svg$/
       },
       {
         use: 'html-loader',

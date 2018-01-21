@@ -9,11 +9,14 @@ class Nav extends Component {
           <Link to='/' className='nav-item'>
             About
           </Link>
-          <a className='nav-item'>
+          <a className='nav-item' href='https://github.com/yokyak/react-agent' target='_blank'>
             Github
           </a>
-          <div className='nav-item' id='logo'>
-            LOGO
+          <div id='logo'>
+            React Agent
+          </div>
+          <div id='logo-small'>
+            R A
           </div>
           <Link to='/guide' className='nav-item'>
             Guide

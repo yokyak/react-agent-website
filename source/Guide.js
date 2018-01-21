@@ -5,7 +5,7 @@ class Guide extends Component {
   render() {
     return (
       <div id='container'>
-        <span style={{marginTop: '80px'}}>GUIDE</span>
+        <div id='content' dangerouslySetInnerHTML={{ __html: htmlContent }} />
       </div>
     );
   }
