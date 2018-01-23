@@ -505,26 +505,28 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 /* Get Started Section
 --------------------------------*/
-#about {
+
+.feature {
   background: #fff;
   padding: 80px 0;
 }
 
-#about .about-content {
-  background: #fff;
+.feature:nth-child(odd) {
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/2.jpg") fixed center center;
+  background-size: cover;
 }
 
-#about .about-title {
+.feature .about-title {
   color: #333;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 28px;
 }
 
-#about .about-text {
+.feature .about-text {
   line-height: 26px;
 }
 
-#about .about-text:last-child {
+.feature .about-text:last-child {
   margin-bottom: 0;
 }
 

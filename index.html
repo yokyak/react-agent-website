@@ -65,7 +65,7 @@
         </div>
         <h2>A JS library for your <span class="rotating">client store, server querying, database management</span></h2>
         <div class="actions">
-          <a href="#about" class="btn-get-started">Get Started</a>
+          <a href="#about" class="btn-get-started">Learn More</a>
           <a href="http://github.com/yokyak/react-agent" target="_blank" class="btn-services">View On Github</a>
         </div>
       </div>
@@ -97,13 +97,13 @@
   <!-- #header -->
 
   <!--==========================
-  About Section
+  Simple API Section
   ============================-->
-  <section id="about">
+  <section class="feature" id="about">
     <div class="container wow fadeInUp">
       <div class="row">
         <div class="col-md-12">
-          <h3 class="section-title">Getting Started</h3>
+          <h3 class="section-title">Simple API</h3>
           <div class="section-title-divider"></div><br /><br />
         </div>
       </div>
@@ -111,43 +111,184 @@
     <div class="container about-container wow fadeInUp">
       <div class="row">
         <div class="col-md-6 col-md about-content">
-          <h2 class="about-title">React</h2>
-          <pre class="prettyprint lang-bsh">
-
-  npm install react-agent --save
-          </pre>
+          <h2 class="about-title">
+             From the client to the server, every aspect of the API is designed to be minimal and abstract a lot of boilerplate away.
+          </h2>
+        </div>
+        <div class="col-md-6 col-md about-content">
           <pre class="prettyprint lang-js">
 
-  import { Agent } from 'react-agent'
+  run('getMessages')
+    .then(data => set({ messages: data.response }))
+    .catch(error => console.log(error))
+          </pre>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  render(
-    &lt;Agent&gt;
-      &lt;App /&gt;
-    &lt;/Agent&gt;
-  , document.querySelector('#root'))
+  <!--==========================
+    Client Side Store Section
+    ============================-->
+  <section class="feature">
+    <div class="container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="section-title">Client Side Store</h3>
+          <div class="section-title-divider"></div>
+          <br />
+          <br />
+        </div>
+      </div>
+    </div>
+    <div class="container about-container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-6 col-md about-content">
+          <pre class="prettyprint lang-js">
+  
+  set({username: 'didrio', id: 1})
+
+  const username = get('username')
           </pre>
         </div>
         <div class="col-md-6 col-md about-content">
-          <h2 class="about-title">Node / Express</h2>
-          <pre class="prettyprint lang-bsh">
+          <h2 class="about-title">
+             A single, central store that triggers React renders when updated from any component.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  npm install react-agent-server --save
-          </pre>
+  <!--==========================
+    Single Server Endpoint Section
+    ============================-->
+  <section class="feature">
+    <div class="container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="section-title">Single Server Endpoint</h3>
+          <div class="section-title-divider"></div>
+          <br />
+          <br />
+        </div>
+      </div>
+    </div>
+    <div class="container about-container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-6 col-md about-content">
+          <h2 class="about-title">
+             All server communication is handled through a single Web Socket connection without the need for RESTful routes.
+          </h2>
+        </div>
+        <div class="col-md-6 col-md about-content">
           <pre class="prettyprint lang-js">
+          
+  run('getMessages')
+    .then(data => set({ messages: data.messages }))
+    .catch(error => console.log(error))
 
-  const agent = require('react-agent-server')
-
-  const server = app.listen(3000)
-  const database = { user: react, password: agent }
-
+  run('postMessage', { message: 'ok', userid: 1 })
+          </pre>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!--==========================
+      SQL Integration Section
+      ============================-->
+  <section class="feature">
+    <div class="container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="section-title">SQL Integration</h3>
+          <div class="section-title-divider"></div>
+          <br />
+          <br />
+        </div>
+      </div>
+    </div>
+    <div class="container about-container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-6 col-md about-content">
+          <pre class="prettyprint lang-js">
+            
   const actions = {
     getMessages: {
       action: 'SELECT * FROM posts'
+    },
+    postMessage: {
+      action: 'INSERT INTO posts VALUES ($message, $userid)'
     }
   }
-
-  agent(server, actions, database)
           </pre>
+        </div>
+        <div class="col-md-6 col-md about-content">
+          <h2 class="about-title">
+            Server actions can be SQL query strings, and the response automatically gets sent back to the client.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--==========================
+    Client Subscriptions Section
+    ============================-->
+  <section class="feature">
+    <div class="container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="section-title">Client Subscriptions</h3>
+          <div class="section-title-divider"></div>
+          <br />
+          <br />
+        </div>
+      </div>
+    </div>
+    <div class="container about-container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-6 col-md about-content">
+          <h2 class="about-title">
+            Clients can listen for server actions triggered by other clients, allowing for real-time data updates.
+          </h2>
+        </div>
+        <div class="col-md-6 col-md about-content">
+          <pre class="prettyprint lang-js">
+
+  on('getMessages', data => set('messages', data.messages))
+
+  emit('getMessages')
+          </pre>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!--==========================
+      Time Travel Debugging Section
+      ============================-->
+  <section class="feature">
+    <div class="container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="section-title">Time Travel Debugging</h3>
+          <div class="section-title-divider"></div>
+          <br />
+          <br />
+        </div>
+      </div>
+    </div>
+    <div class="container about-container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-6 col-md about-content">
+          <img style="width: 100%" src="./img/3.png">
+        </div>
+        <div class="col-md-6 col-md about-content">
+          <h2 class="about-title">
+            Since the client store is built upon Redux, the Redux DevTools work out of the box.
+          </h2>
         </div>
       </div>
     </div>
@@ -156,7 +297,7 @@
   <!--==========================
   Services Section
   ============================-->
-  <section id="services">
+  <!-- <section id="services">
     <div class="container wow fadeInUp">
       <div class="row">
         <div class="col-md-12">
@@ -199,12 +340,12 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
     <!--==========================
       About Section
       ============================-->
-    <section id="about">
+    <section class="feature">
       <div class="container wow fadeInUp">
         <div class="row">
           <div class="col-md-12">
@@ -221,40 +362,40 @@
             <h2 class="about-title">React</h2>
             <pre class="prettyprint lang-bsh">
     
-      npm install react-agent --save
-              </pre>
-            <pre class="prettyprint lang-js">
-    
-      import { Agent } from 'react-agent'
-    
-      render(
-        &lt;Agent&gt;
-          &lt;App /&gt;
-        &lt;/Agent&gt;
-      , document.querySelector('#root'))
-              </pre>
+  npm install react-agent --save
+          </pre>
+        <pre class="prettyprint lang-js">
+
+  import { Agent } from 'react-agent'
+
+  render(
+    &lt;Agent&gt;
+      &lt;App /&gt;
+    &lt;/Agent&gt;
+  , document.querySelector('#root'))
+          </pre>
           </div>
           <div class="col-md-6 col-md about-content">
             <h2 class="about-title">Node / Express</h2>
             <pre class="prettyprint lang-bsh">
     
-      npm install react-agent-server --save
-              </pre>
-            <pre class="prettyprint lang-js">
-    
-      const agent = require('react-agent-server') 
-    
-      const server = app.listen(3000) 
-      const database = { user: react, password: agent }
-      
-      const actions = { 
-        getMessages: { 
-          action: 'SELECT * FROM posts' 
-        } 
-      } 
-      
-      agent(server, actions, database)
-              </pre>
+  npm install react-agent-server --save
+          </pre>
+        <pre class="prettyprint lang-js">
+
+  const agent = require('react-agent-server') 
+
+  const server = app.listen(3000) 
+  const database = { user: react, password: agent }
+  
+  const actions = { 
+    getMessages: { 
+      action: 'SELECT * FROM posts' 
+    } 
+  } 
+  
+  agent(server, actions, database)
+          </pre>
           </div>
         </div>
       </div>
