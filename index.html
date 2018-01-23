@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>React Agent</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+  <meta property="og:title" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+
+  <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+
+  <!-- Place your favicon.ico and apple-touch-icon.png in the template root directory -->
+  <link href="favicon.ico" rel="shortcut icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate-css/animate.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Six+Caps" rel="stylesheet">
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+  <link rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+
+  <!-- =======================================================
+    Theme Name: Imperial
+    Theme URL: https://bootstrapmade.com/imperial-free-onepage-bootstrap-theme/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+  <div id="preloader"></div>
+
+  <!--==========================
+  Hero Section
+  ============================-->
+  <section id="hero">
+    <div class="hero-container">
+      <div class="wow fadeIn">
+        <div class="hero-logo">
+          <!-- <img class="" src="img/logo.png" alt="Imperial"> -->
+          <h1>React Agent</h1>
+        </div>
+        <h2>A JS library for your <span class="rotating">client store, server querying, database management</span></h2>
+        <div class="actions">
+          <a href="#about" class="btn-get-started">Get Started</a>
+          <a href="http://github.com/yokyak/react-agent" target="_blank" class="btn-services">View On Github</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--==========================
+  Header Section
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <!-- <a href="#hero"><img src="img/logo.png" alt="" title="" /></img></a> -->
+        <!-- Uncomment below if you prefer to use a text image -->
+        <h1><a href="#hero">React Agent</a></h1>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a href="http://github.com/yokyak/react-agent" target="_blank">Github</a></li>
+          <li><a href="http://github.com/yokyak/react-agent" target="_blank">Guide</a></li>
+          <li><a href="http://github.com/yokyak/react-agent" target="_blank">Documentation</a></li>
+        </ul>
+      </nav>
+      <!-- #nav-menu-container -->
+    </div>
+  </header>
+  <!-- #header -->
+
+  <!--==========================
+  About Section
+  ============================-->
+  <section id="about">
+    <div class="container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="section-title">Getting Started</h3>
+          <div class="section-title-divider"></div><br /><br />
+        </div>
+      </div>
+    </div>
+    <div class="container about-container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-6 col-md about-content">
+          <h2 class="about-title">React</h2>
+          <pre class="prettyprint lang-bsh">
+
+  npm install react-agent --save
+          </pre>
+          <pre class="prettyprint lang-js">
+
+  import { Agent } from 'react-agent'
+
+  render(
+    &lt;Agent&gt;
+      &lt;App /&gt;
+    &lt;/Agent&gt;
+  , document.querySelector('#root'))
+          </pre>
+        </div>
+        <div class="col-md-6 col-md about-content">
+          <h2 class="about-title">Node / Express</h2>
+          <pre class="prettyprint lang-bsh">
+
+  npm install react-agent-server --save
+          </pre>
+          <pre class="prettyprint lang-js">
+
+  const agent = require('react-agent-server') 
+
+  const server = app.listen(3000) 
+  const database = { user: react, password: agent }
+  
+  const actions = { 
+    getMessages: { 
+      action: 'SELECT * FROM posts' 
+    } 
+  } 
+  
+  agent(server, actions, database)
+          </pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--==========================
+  Services Section
+  ============================-->
+  <section id="services">
+    <div class="container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="section-title">Features</h3>
+          <div class="section-title-divider"></div>
+          <p class="section-description">React Agent does a lot of things for you. Here are the main features at a glance.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 service-item">
+          <div class="service-icon"><i class="fa fa-list-ul"></i></div>
+          <h4 class="service-title"><a href="">Simple API</a></h4>
+          <p class="service-description">From the client to the server, every aspect of the API is designed to be minimal and abstract a lot of boilerplate away.</p>
+        </div>
+        <div class="col-md-4 service-item">
+          <div class="service-icon"><i class="fa fa-desktop"></i></div>
+          <h4 class="service-title"><a href="">Client Side Store</a></h4>
+          <p class="service-description">A single, central store that triggers React renders when updated from any component.</p>
+        </div>
+        <div class="col-md-4 service-item">
+          <div class="service-icon"><i class="fa fa-server"></i></div>
+          <h4 class="service-title"><a href="">Single Server Endpoint</a></h4>
+          <p class="service-description">All server communication is handled through a single Web Socket connection without the need for RESTful routes.</p>
+        </div>
+        <div class="col-md-4 service-item">
+          <div class="service-icon"><i class="fa fa-hdd-o"></i></div>
+          <h4 class="service-title"><a href="">SQL Integration</a></h4>
+          <p class="service-description">Server actions can be SQL query strings, and the response automatically gets sent back to the client.</p>
+        </div>
+        <div class="col-md-4 service-item">
+          <div class="service-icon"><i class="fa fa-wifi"></i></div>
+          <h4 class="service-title"><a href="">Client Subscriptions</a></h4>
+          <p class="service-description">Clients can listen for server actions triggered by other clients, allowing for real-time data updates.</p>
+        </div>
+        <div class="col-md-4 service-item">
+          <div class="service-icon"><i class="fa fa-fast-backward"></i></div>
+          <h4 class="service-title"><a href="">Time Travel Debugging</a></h4>
+          <p class="service-description">Since the client store is built upon Redux, the Redux DevTools work out of the box.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--==========================
+  Team Section
+  ============================-->
+  <section id="team">
+    <div class="container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="section-title">Our Team</h3>
+          <div class="section-title-divider"></div><br /><br />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <div class="member">
+            <div class="pic"><img src="img/team-1.jpg" alt=""></div>
+            <h4>Tom Rosenblatt</h4>
+            <span>Chief Executive Officer</span>
+            <div class="social">
+              <a href=""><i class="fa fa-twitter"></i></a>
+              <a href=""><i class="fa fa-facebook"></i></a>
+              <a href=""><i class="fa fa-google-plus"></i></a>
+              <a href=""><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="member">
+            <div class="pic"><img src="img/team-2.jpg" alt=""></div>
+            <h4>Henry Au</h4>
+            <span>Chief Product Manager</span>
+            <div class="social">
+              <a href=""><i class="fa fa-twitter"></i></a>
+              <a href=""><i class="fa fa-facebook"></i></a>
+              <a href=""><i class="fa fa-google-plus"></i></a>
+              <a href=""><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="member">
+            <div class="pic"><img src="img/team-3.jpg" alt=""></div>
+            <h4>Andrew Harris</h4>
+            <span>Chief Technology Officer</span>
+            <div class="social">
+              <a href=""><i class="fa fa-twitter"></i></a>
+              <a href=""><i class="fa fa-facebook"></i></a>
+              <a href=""><i class="fa fa-google-plus"></i></a>
+              <a href=""><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="member">
+            <div class="pic"><img src="img/team-4.jpg" alt=""></div>
+            <h4>Eric Choi</h4>
+            <span>Chairman</span>
+            <div class="social">
+              <a href=""><i class="fa fa-twitter"></i></a>
+              <a href=""><i class="fa fa-facebook"></i></a>
+              <a href=""><i class="fa fa-google-plus"></i></a>
+              <a href=""><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--==========================
+  Footer
+============================-->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="copyright">
+            &copy; Copyright <strong>React Agent</strong>. All Rights Reserved.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- Required JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/morphext/morphext.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/stickyjs/sticky.js"></script>
+  <script src="lib/easing/easing.js"></script>
+
+  <!-- Template Specisifc Custom Javascript File -->
+  <script src="js/custom.js"></script>
+
+  <script src="contactform/contactform.js"></script>
+
+
+</body>
+
+</html>
