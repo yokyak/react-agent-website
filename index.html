@@ -60,7 +60,7 @@
     <div class="hero-container">
       <div class="wow fadeIn">
         <div class="hero-logo">
-          <!-- <img class="" src="img/logo.png" alt="Imperial"> -->
+          <!-- <img class="" id="top-logo" src="img/logo.png" alt="Imperial"> -->
           <h1>React Agent</h1>
         </div>
         <h2>A JS library for your <span class="rotating">client store, server querying, database management</span></h2>
@@ -76,12 +76,12 @@
   Header Section
   ============================-->
   <header id="header">
-    <div class="container">
 
-      <div id="logo" class="pull-left">
-        <!-- <a href="#hero"><img src="img/logo.png" alt="" title="" /></img></a> -->
+
+      <div id="logo">
+        <a href="#hero"><img src="img/logo.png" alt="" title=""/></img></a>
         <!-- Uncomment below if you prefer to use a text image -->
-        <h1><a href="#hero">React Agent</a></h1>
+        <h1><a href="#hero" id="small-logo" >React Agent</a></h1>
       </div>
 
       <nav id="nav-menu-container">
@@ -92,7 +92,7 @@
         </ul>
       </nav>
       <!-- #nav-menu-container -->
-    </div>
+
   </header>
   <!-- #header -->
 
@@ -135,17 +135,17 @@
           </pre>
           <pre class="prettyprint lang-js">
 
-  const agent = require('react-agent-server') 
+  const agent = require('react-agent-server')
 
-  const server = app.listen(3000) 
+  const server = app.listen(3000)
   const database = { user: react, password: agent }
-  
-  const actions = { 
-    getMessages: { 
-      action: 'SELECT * FROM posts' 
-    } 
-  } 
-  
+
+  const actions = {
+    getMessages: {
+      action: 'SELECT * FROM posts'
+    }
+  }
+
   agent(server, actions, database)
           </pre>
         </div>

@@ -191,25 +191,32 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #header {
   background: #111;
-  padding: 20px 0;
+  /* padding: 15px 0 18px 0; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
   height: 90px;
 }
 
 #header #logo {
-  float: left;
+  display: flex;
+  align-items: center;
 }
 
 #header #logo h1 {
   margin: 0;
   padding: 6px 0;
-  line-height: 0.7;
+  /* line-height: 0.4; */
   text-transform: uppercase;
   font-family: 'Six Caps', cursive;
   color: white;
-  font-size: 4em;
-  margin-bottom: 60px;
+  font-size: 42px;
+  margin-left: 20px;
+  /* margin-bottom: 60px; */
   letter-spacing: 6px;
-  margin-left: 100px;
+  /* margin-left: 100px; */
+  /* transform: translate(0, -4px); */
 }
 
 #header #logo h1 a, #header #logo h1 a:hover {
@@ -236,6 +243,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .is-sticky #header {
   background: rgba(0, 0, 0, 0.85);
+}
+
+#top-logo {
+  height: 10vw;
+  padding-bottom: 8px;
 }
 
 /*--------------------------------------------------------------
@@ -459,6 +471,10 @@ body.mobile-nav-active #mobile-nav {
 
 body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
+}
+
+#small-logo {
+  float: left;
 }
 
 /*--------------------------------------------------------------
