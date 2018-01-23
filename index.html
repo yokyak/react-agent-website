@@ -201,6 +201,65 @@
     </div>
   </section>
 
+    <!--==========================
+      About Section
+      ============================-->
+    <section id="about">
+      <div class="container wow fadeInUp">
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="section-title">Getting Started</h3>
+            <div class="section-title-divider"></div>
+            <br />
+            <br />
+          </div>
+        </div>
+      </div>
+      <div class="container about-container wow fadeInUp">
+        <div class="row">
+          <div class="col-md-6 col-md about-content">
+            <h2 class="about-title">React</h2>
+            <pre class="prettyprint lang-bsh">
+    
+      npm install react-agent --save
+              </pre>
+            <pre class="prettyprint lang-js">
+    
+      import { Agent } from 'react-agent'
+    
+      render(
+        &lt;Agent&gt;
+          &lt;App /&gt;
+        &lt;/Agent&gt;
+      , document.querySelector('#root'))
+              </pre>
+          </div>
+          <div class="col-md-6 col-md about-content">
+            <h2 class="about-title">Node / Express</h2>
+            <pre class="prettyprint lang-bsh">
+    
+      npm install react-agent-server --save
+              </pre>
+            <pre class="prettyprint lang-js">
+    
+      const agent = require('react-agent-server') 
+    
+      const server = app.listen(3000) 
+      const database = { user: react, password: agent }
+      
+      const actions = { 
+        getMessages: { 
+          action: 'SELECT * FROM posts' 
+        } 
+      } 
+      
+      agent(server, actions, database)
+              </pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
   <!--==========================
   Team Section
   ============================-->
