@@ -112,7 +112,7 @@
       <div class="row">
         <div class="col-md-6 col-md about-content">
           <h2 class="about-title">
-             From the client to the server, every aspect of the API is designed to be minimal and abstract a lot of boilerplate away.
+            From the client to the server, every aspect of the API is designed to be minimal and abstract a lot of boilerplate away.
           </h2>
         </div>
         <div class="col-md-6 col-md about-content">
@@ -146,7 +146,7 @@
         <div class="col-md-6 col-md about-content">
           <pre class="prettyprint lang-js">
   
-  set({username: 'didrio', id: 1})
+  set({ username: 'didrio', id: 1 })
 
   const username = get('username')
           </pre>
@@ -202,7 +202,7 @@
     <div class="container wow fadeInUp">
       <div class="row">
         <div class="col-md-12">
-          <h3 class="section-title">SQL Integration</h3>
+          <h3 class="section-title">SQL And More</h3>
           <div class="section-title-divider"></div>
           <br />
           <br />
@@ -218,15 +218,20 @@
     getMessages: {
       action: 'SELECT * FROM posts'
     },
-    postMessage: {
-      action: 'INSERT INTO posts VALUES ($message, $userid)'
+    getWeather: {
+      action: (resolve, reject, request) => { 
+        fetch(request.url, (error, response, body) => { 
+          if (error) reject(error); 
+          else resolve(body);
+        }); 
+      }
     }
   }
           </pre>
         </div>
         <div class="col-md-6 col-md about-content">
           <h2 class="about-title">
-            Server actions can be SQL query strings, and the response automatically gets sent back to the client.
+            Server actions can be SQL query strings or just arbitrary functions that call to any API, and the response automatically gets sent back to the client.
           </h2>
         </div>
       </div>
@@ -283,7 +288,7 @@
     <div class="container about-container wow fadeInUp">
       <div class="row">
         <div class="col-md-6 col-md about-content">
-          <img style="width: 100%" src="./img/3.png">
+          <img style="width: 100%; border-radius: 5px" src="./img/3.png">
         </div>
         <div class="col-md-6 col-md about-content">
           <h2 class="about-title">
@@ -293,54 +298,6 @@
       </div>
     </div>
   </section>
-
-  <!--==========================
-  Services Section
-  ============================-->
-  <!-- <section id="services">
-    <div class="container wow fadeInUp">
-      <div class="row">
-        <div class="col-md-12">
-          <h3 class="section-title">Features</h3>
-          <div class="section-title-divider"></div>
-          <p class="section-description">React Agent does a lot of things for you. Here are the main features at a glance.</p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-4 service-item">
-          <div class="service-icon"><i class="fa fa-list-ul"></i></div>
-          <h4 class="service-title"><a href="">Simple API</a></h4>
-          <p class="service-description">From the client to the server, every aspect of the API is designed to be minimal and abstract a lot of boilerplate away.</p>
-        </div>
-        <div class="col-md-4 service-item">
-          <div class="service-icon"><i class="fa fa-desktop"></i></div>
-          <h4 class="service-title"><a href="">Client Side Store</a></h4>
-          <p class="service-description">A single, central store that triggers React renders when updated from any component.</p>
-        </div>
-        <div class="col-md-4 service-item">
-          <div class="service-icon"><i class="fa fa-server"></i></div>
-          <h4 class="service-title"><a href="">Single Server Endpoint</a></h4>
-          <p class="service-description">All server communication is handled through a single Web Socket connection without the need for RESTful routes.</p>
-        </div>
-        <div class="col-md-4 service-item">
-          <div class="service-icon"><i class="fa fa-hdd-o"></i></div>
-          <h4 class="service-title"><a href="">SQL Integration</a></h4>
-          <p class="service-description">Server actions can be SQL query strings, and the response automatically gets sent back to the client.</p>
-        </div>
-        <div class="col-md-4 service-item">
-          <div class="service-icon"><i class="fa fa-wifi"></i></div>
-          <h4 class="service-title"><a href="">Client Subscriptions</a></h4>
-          <p class="service-description">Clients can listen for server actions triggered by other clients, allowing for real-time data updates.</p>
-        </div>
-        <div class="col-md-4 service-item">
-          <div class="service-icon"><i class="fa fa-fast-backward"></i></div>
-          <h4 class="service-title"><a href="">Time Travel Debugging</a></h4>
-          <p class="service-description">Since the client store is built upon Redux, the Redux DevTools work out of the box.</p>
-        </div>
-      </div>
-    </div>
-  </section> -->
 
     <!--==========================
       About Section
@@ -386,16 +343,27 @@
   const agent = require('react-agent-server') 
 
   const server = app.listen(3000) 
-  const database = { user: react, password: agent }
   
   const actions = { 
     getMessages: { 
       action: 'SELECT * FROM posts' 
     } 
   } 
+
+  const database = { 
+    name: 'react', user: 'agent', password: 'ra', 
+    dialect: 'postgres', host: 'db.com', port: 3421 
+  }
   
   agent(server, actions, database)
           </pre>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top: 60px" class="container wow fadeInUp">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <a href="http://github.com/yokyak/react-agent" target="_blank" class="btn-get-started"><button id="guide">Read The Guide</button></a>
           </div>
         </div>
       </div>
