@@ -122,6 +122,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media (max-width: 370px) {
+  #hero h1 {
+    line-height: 120px;
+  }
+}
+
 #hero h2 {
   color: #999;
   margin-bottom: 50px;
