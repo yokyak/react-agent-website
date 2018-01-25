@@ -113,6 +113,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 48px;
   text-transform: uppercase;
   color: #fff;
+  white-space: nowrap;
 }
 
 @media (max-width: 768px) {
@@ -122,11 +123,11 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@media (max-width: 400px) {
+/* @media (max-width: 400px) {
   #hero h1 {
     line-height: 120px;
   }
-}
+} */
 
 #hero h2 {
   color: #999;
