@@ -195,6 +195,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   padding: 0 40px;
   height: 90px;
+  white-space: nowrap;
 }
 
 #header #logo {
@@ -208,6 +209,7 @@ h1, h2, h3, h4, h5, h6 {
   /* line-height: 0.4; */
   text-transform: uppercase;
   font-family: 'Six Caps', cursive;
+  white-space: nowrap;
   color: white;
   font-size: 42px;
   margin-left: 20px;
@@ -313,10 +315,16 @@ h1, h2, h3, h4, h5, h6 {
   margin: 5px 0;
 }
 
-@media (max-width: 768px) {
-  #nav-menu-container {
+@media (max-width: 500px) {
+  #documentation {
     display: none;
   }
+  #docs {
+    display: inline-block !important;
+  }
+  #header {
+  padding: 0 20px;
+}
 }
 
 /* Nav Meu Styling */
