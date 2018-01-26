@@ -9,11 +9,11 @@ jQuery(document).ready(function( $ ) {
     $("#header").sticky({ topSpacing: 0, zIndex: '50' });
 
   // Hero rotating texts
-//   $("#hero .rotating").Morphext({
-//     animation: "flipInX",
-//     separator: ",",
-//     speed: 3000
-//   });
+  $("#hero .rotating").Morphext({
+    animation: "flipInX",
+    separator: ",",
+    speed: 3000
+  });
   
   // Initiate the wowjs
 //   new WOW().init();
